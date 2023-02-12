@@ -12,6 +12,7 @@ body {
   background-color: #f2f4f8;
   margin: 0;
   box-sizing: border-box;
+  padding: 0 50px;
 }
 
 a {
@@ -633,7 +634,8 @@ button {
 .profileDetailsHeader {
   display: flex;
   justify-content: space-between;
-  max-width: 500px;
+  /* max-width: 500px; */
+  width: 100%;
 }
 
 .personalDetailsText {
@@ -651,7 +653,8 @@ button {
   border-radius: 1rem;
   padding: 1rem;
   box-shadow: rgba(0, 0, 0, 0.2);
-  max-width: 500px;
+  /* max-width: 500px; */
+  width: 100%;
 }
 
 .profileDetails {
@@ -695,7 +698,8 @@ button {
   box-shadow: rgba(0, 0, 0, 0.2);
   margin-top: 2rem;
   font-weight: 600;
-  max-width: 500px;
+  /* max-width: 500px; */
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
