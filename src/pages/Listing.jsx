@@ -35,6 +35,8 @@ function Listing() {
     fetchListing();
   }, [navigate, params.listingId]);
 
+  console.log("listing=",listing);
+
   if (loading) {
     return <Spinner />;
   }
@@ -44,6 +46,7 @@ function Listing() {
       <Helmet>
         <title>{listing.name}</title>
       </Helmet>
+
       <Swiper slidesPerView={1} pagination={{ clickable: true }}>
         {listing.imgUrls.map((url, index) => (
           <SwiperSlide key={index}>
@@ -131,11 +134,14 @@ function Listing() {
           </MapContainer>
         </div>
 
-        {auth.currentUser?.uid !== listing.userRef && (
+        {console.log("auth.currentUser?.uid=",auth.currentUser?.uid , listing.userRef)}
+
+        {auth.currentUser?.uid === listing.userRef && (
           <Link
             to={`/contact/${listing.userRef}?listingName=${listing.name}`}
             className="primaryButton"
           >
+            {console.log("listing.userRef=",listing.userRef)}
             Contact Landlord
           </Link>
         )}

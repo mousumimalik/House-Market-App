@@ -11,9 +11,12 @@ function Contact() {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const params = useParams();
+  console.log("params=", params);
 
   useEffect(() => {
     const getLandlord = async () => {
+      console.log("params.landlordId=", params.landlordId);
+
       const docRef = doc(db, "users", params.landlordId);
       const docSnap = await getDoc(docRef);
 
@@ -72,3 +75,7 @@ function Contact() {
 }
 
 export default Contact;
+
+// slklIkZ7BGT7iL9zz5yDqpxY2Nv1
+// LAxbVyORDeewJbYimQ36rL2Cvuz2
+// slklIkZ7BGT7iL9zz5yDqpxY2Nv1
